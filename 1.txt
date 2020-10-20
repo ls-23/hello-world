@@ -1,0 +1,88 @@
+1、在当前目录下建立文件exam.c，将文件exam.c拷贝到/tmp这个目录下，并改名为 shiyan.c？
+touch exam.c
+mkdir tmp
+cp exam.c tmp
+mv /tmp/exam.c /tmp/shiyan.c
+
+
+
+2、在任何目录下回到用户主目录？
+cd ~
+
+
+
+4、在当前目录中新建文件text并设置文件的属性为文件属主(u)增加执行权限与文件属主同组用户(g)增加写权限其他用户(o) 删除读权限？
+touch text
+chomd u+x text
+chomd g+w text
+chomd o-r text
+
+
+5、创建用户xu和liu并将/home/xu目录中的所有文件拷贝到目录/home/liu中？
+useradd xu
+useradd liu
+cp -r /home/xu/* /home/cp/liu/
+
+
+
+
+6、创建5个文件分别是 1.txt 2.txt 3.txt 4.txt 5.txt，压缩这5个文件，压缩包的名字是hailiang.tar？
+touch {1..5}.txt
+tar -cf all.tar *.txt
+
+
+ 
+
+7、建立文件 file1.txt 并更名为 file2.txt？
+touch file1.txt
+mv file1.txt file2.txt 
+
+
+
+8、用一行命令修改002目录下所有文件属性对拥有者、群组可读可写可执行？
+chmod 700
+
+
+
+9、新建一个组group1 ，将root用户添加到该组，并查看是否添加成功？
+group group1
+
+
+
+
+10、建立文件ff.txt 并用数字的形式(绝对权限)把文件的权限改为rw-rw-rw-？
+touch ff.txt
+chmod 666 ff.txt
+
+
+11、将/home目录拷贝到/root目录下，然后再将root下的home及子目录删除？
+cp -r /home/root/
+rm -r /root/home
+
+
+
+12、用vi建立文件bbbb.txt 并将用户名的加入其中保存退出？
+vi bbbb.txt
+root
+:wq
+
+
+
+
+13、查看当前目录下所有的文件或目录（含.开头的），把查看结果生成文件ls.txt？
+ls -al | grep .*
+ls -al | grep .* > ls.txt
+
+
+
+
+14、将当前目录中扩展名为txt、doc和bak的文件全部复制到/home目录中？
+
+
+
+15、重启和关机命令？
+shutdown now(关机命令)
+reboot(重启命令)
+ 
+
+
